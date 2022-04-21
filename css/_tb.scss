@@ -1,0 +1,331 @@
+// Scss Document
+
+/* =================================================================================================
+TB版の指定
+================================================================================================= */
+@media screen and (min-width:720px) {
+
+  /* ------------------------------
+  フォント指定
+  ------------------------------ */
+  h1 {  
+    font: $pc-h1;
+  }
+  
+  h2,
+  h3 {
+    margin-bottom: 40px;
+  }
+
+  /* ------------------------------
+  ヘッダー
+  ------------------------------ */
+  .header-logo {
+    width: 300px;
+  }
+
+  /* ------------------------------
+  メインビジュアル
+  ------------------------------ */
+  #top-main {
+    margin: 0 auto 340px;
+    max-width: 850px;
+    
+    h1 {
+      margin-bottom: 100px;
+    }
+    
+    p {
+      font: $text;
+      margin-bottom: 40px;
+    }
+    
+    .supporter-logo {
+      margin: 0 auto 40px;
+      width: 300px;
+    }
+    
+    .happy-img-1 {
+      width: 200px;
+      top: 15vh;
+      left: 1vw;
+    }
+
+    .happy-img-2 {
+      width: 120px;
+      top: 78vh;
+      left: 20vw;
+    }
+
+    .happy-img-3 {
+      width: 140px;
+      top: 80vh;
+      right: 18vw;
+    }
+
+    .happy-img-4 {
+      width: 120px;
+      top: 38vh;
+      left: 10vw;
+    }
+
+    .happy-img-5 {
+      width: 140px;
+      top: 56vh;
+      left: 5vw;
+    }
+
+    .happy-img-6 {
+      position: absolute;
+      width: 160px;
+      top: 61vh;
+      right: 1vh;
+    }
+
+    .happy-img-7 {
+      position: absolute;
+      width: 120px;
+      top: 41vh;
+      right: 10vw;
+    }
+
+    .happy-img-8 {
+      position: absolute;
+      width: 195px;
+      top: 12vh;
+      right: 1vw;
+    }
+  }
+  
+  /* ------------------------------
+  わたしたちの取り組む課題
+  ------------------------------ */
+  #issue {
+    .stress {
+      padding-bottom: 40px;
+      margin-top: 0;
+      width: 65%;
+      
+      h3 {
+        padding-top: 40px;
+        margin-left: 30px;
+        text-align: left;
+      }
+      
+      img {
+        top: 50px;
+        left: 85%;
+        transform: none;
+      }
+      
+      p {
+        margin: 0 0 20px 30px;
+        max-width: 360px;
+      }
+    }
+    
+    .suicide {
+      padding-bottom: 40px;
+      margin-left: 35%;
+      width: 65%;
+      
+      h3 {
+        padding-top: 40px;
+        margin-left: 100px;
+        text-align: left;
+      }
+      
+      img {
+        top: 50px;
+        left: -45%;
+        transform: none;
+      }
+      
+      p {
+        margin: 0 0 20px 100px;
+        max-width: 360px;
+      }
+    }
+  }
+  
+  /* ------------------------------
+  わたしたちの主な実績
+  ------------------------------ */
+  #numbers {
+    #numbers-tab {
+      box-shadow: none;
+      display: flex;
+      height: auto;
+      justify-content: space-evenly;
+      max-width: none;
+      width: 90%;
+      
+      ul {
+        display: none;
+      }
+      
+      .numbers-box {
+        width: 210px;
+      }
+    }
+    
+    .numbers-situation {
+      display: flex;
+      flex-wrap: wrap;
+
+      h3 {
+        width: 100%;
+      }
+
+      .numbers-graph {
+        align-items: flex-end;
+        width: 55%;
+      }
+
+      .numbers-text {
+        width: 40%;
+      }
+    }
+  }
+
+  
+  /* ------------------------------
+  利用者・サポーターの声
+  ------------------------------ */
+  #voices {    
+    .slider {
+      margin: 0 auto 60px;
+      max-width: none;
+    }
+    
+    .slide {
+      box-shadow: none;
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      margin: 0 auto 40px;
+      width: 90%;
+    }
+    
+    .slide-r {
+      flex-direction: row-reverse;
+    }
+    
+    .slide-profile {
+      width: 30%;
+    }
+    
+    .slide-text {
+      padding: 0;
+      margin: 0;
+      max-width: none;
+    }
+    
+    .slide-text-box {
+      background: $grey-20;
+      border-radius: 0;
+      padding: 20px;
+      margin: 0;
+      position: relative;
+      height: 100%;
+      width: 70%;
+    }
+    
+    .slide-text-box:after {
+      position: absolute;
+      border-right: 40px solid $grey-20;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      content: "";
+      margin-top: -10px;
+      left: -30px;
+      top: 20%;
+    }
+    
+    .slide-r .slide-text-box:after {
+      border-right: none;
+      border-left: 40px solid $grey-20;
+      left: auto;
+      right: -30px;
+    }
+    
+    h4 {
+      text-align: left;
+    }
+    
+    .br-sp {
+      display: none;
+    }
+  }
+  
+  /* ------------------------------
+  ご寄付の活用方法
+  ------------------------------ */
+  #usage {  
+    .usage-text {
+      margin: 100px 0 60px;
+      padding: 40px 0;
+      width: 65%;
+
+      .usage-text-padding {
+        padding-top: 0;
+      }
+      
+      p {
+        margin-left: 30px;
+        max-width: 350px;
+      }
+    }
+
+    .usage-img-1 {
+      left: 115%;
+      width: 300px;
+    }
+
+    .usage-example {  
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      
+      h3 {
+        width: 100%;
+      }
+    }
+  }
+
+  /* ------------------------------
+  支援の方法
+  ------------------------------ */
+  #donate {
+    p {
+      text-align: center;
+    }
+  }
+  
+  /* ------------------------------
+  よくあるご質問
+  ------------------------------ */
+  #faq {
+    .orange-md {
+      font: $pc-h1;
+      width: 7.5%;
+    }
+    
+    .faq-q {
+      line-height: 96px;
+    }
+    
+    .faq-graph {
+      width: 50%;
+    }
+  }
+  
+  /* ------------------------------
+  もっと詳しく
+  ------------------------------ */
+  #info {
+    .br-tb {
+      display: inline;
+    }
+  }
+}

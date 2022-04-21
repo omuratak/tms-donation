@@ -1,0 +1,501 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="keywords" content="カウンセリング,メンタルヘルス,うつ,不安,悩み,オンラインカウンセリング,スマホ,寄付">
+<meta name="description" content="無料SNS・電話相談を拡充するためにサポーターを募集しています | NPO法人東京メンタルヘルス・スクエア">
+<title>無料SNS・電話相談を拡充するためにサポーターを募集しています | NPO法人東京メンタルヘルス・スクエア</title>
+
+<!--　favicon	-->
+<link rel="icon" href="images/logo/tms-favicon.png">
+
+<!-- css -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- javascript --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- JQuery	--> 
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> <!-- slick slider	--> 
+<script type="text/javascript" src="js/waypoint.js"></script> <!-- Waypoint.js  --> 
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script> 
+
+<!-- ハンバーガーメニュー	--> 
+<script>
+		$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+			$('.btn-hamburger').on('click', function(){　//.btn-hamburgerがクリックされた時の処理
+				$('.btn-hamburger, #cover-layer, nav').toggleClass('is-active');　//.is-activeを付ける・外す
+			});
+			$('nav ul li a').on('click', function(){　//navのボタンがクリックされた時の処理
+				$('.btn-hamburger, #cover-layer, nav').removeClass('is-active');　//.is-activeを付ける・外す
+			});
+		});
+	</script> 
+
+<!-- スムーススクロール --> 
+<script>
+		$(function(){
+		 // #で始まる出発地点をクリックした場合に処理を実行
+		 $('a[href^="#"][href!="#action-chat"][href!="#action-phone"][href!="#action-counseling"][href!="#numbers-chat"][href!="#numbers-phone"][href!="#numbers-counseling"]').click(function() {
+				// 出発地点の値を取得
+				var href= $(this).attr("href");
+				// 到着地点を取得
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				// 到着地点を数値で取得
+				var position = target.offset().top;       
+				// スムーススクロール
+         $('body,html').animate({scrollTop:position}, 400, 'swing');
+         return false;
+     });
+    });
+  </script> 
+
+<!-- ページトップボタンを途中から表示 --> 
+<script>
+		$(document).ready(function() {
+			var pagetop = $('.page-top');
+			$(window).scroll(function () {
+				 if ($(this).scrollTop() > 100) {
+							pagetop.fadeIn();
+				 } else {
+							pagetop.fadeOut();
+							}
+				 });
+		});
+	</script> 
+
+<!-- スクロールでフェードイン	--> 
+<script>
+		$(document).ready(function ($){
+       $(window).scroll(function () {
+				 $('.fade-in').each(function () {
+					 var scroll = $(window).scrollTop(); // 現在のスクロール位置
+					 var offset = $(this).offset().top; // 対象の上からの位置
+					 var windowHeight = $(window).height(); // ウィンドウの高さ
+					 if (scroll > offset - windowHeight + 50) {
+						 $(this).addClass("scroll-in");
+					 }
+				 });
+       });
+		});
+	</script> 
+
+<!-- スクロールでアニメーション	--> 
+<script>
+		$(document).ready(function ($){
+       $(window).scroll(function () {
+				 $('.animate-graph').each(function () {
+					 var scroll = $(window).scrollTop(); // 現在のスクロール位置
+					 var offset = $(this).offset().top; // 対象の上からの位置
+					 var windowHeight = $(window).height(); // ウィンドウの高さ
+					 if (scroll > offset - windowHeight + 50) {
+						 $(this).addClass("numbers-anime");
+					 }
+				 });
+       });
+		});
+	</script> 
+
+<!-- タブで表示  --> 
+<script>
+  const mediaQueryTB = window.matchMedia('(max-width: 719px)')
+  const mediaQueryPC = window.matchMedia('(max-width: 999px)')
+  
+  if (mediaQueryTB.matches) {
+    $(document).ready(function() {
+      $("#numbers-tab").tabs();
+    });
+  }
+  
+  if (mediaQueryPC.matches) {
+    $(document).ready(function() {
+      $("#action-tab").tabs();
+    });
+  }
+  </script> 
+
+<!-- slick	--> 
+<script>
+	$(document).ready(function(){
+		// 「利用者の声」スライダー      
+		$('.slider').slick({
+			slidesToShow: 1, 
+			slidesToScroll: 1,
+			autoplay: false,
+			dots: true,
+			arrows: true,
+			mobileFirst: true,
+			responsive: [{
+				breakpoint: 719, 
+				settings: "unslick"
+			}]
+		});
+	});
+</script>
+  
+<!-- top-mainのパララックス -->
+<script>  
+  $(document).ready(function(){
+    setTimeout(function(){
+      $('.rellax').addClass('no-transform');
+      var rellax = new Rellax('.rellax');
+    }, 2700);
+  });
+</script>
+  
+</head>
+
+<body>
+<div id="wrapper"> 
+	
+	<!--	メニュー表示時のカバーレイヤー	-->
+	<div id="cover-layer"></div>
+	
+	<!--	ハンバーガーメニュー	-->
+	<div class="btn-hamburger"> <span class="line line-1"></span> <span class="line line-2"></span> <span class="line line-3"></span> </div>
+	<header>
+		<div class="header-logo"><a href="https://www.npo-tms.or.jp/" target="_blank"><img src="images/logo/tms-header-logo.png" alt="東京メンタルヘルス・スクエアロゴ"></a></div>
+	</header>
+  
+  <!-- ナビゲーション -->
+	<nav>
+		<ul>
+			<li><a href="#issue">わたしたちが取り組む課題</a></li>
+			<li><a href="#action">わたしたちの主な取り組み</a></li>
+			<li><a href="#numbers">わたしたちの主な実績</a></li>
+			<li><a href="#voices">利用者・サポーターの声</a></li>
+			<li><a href="#usage">ご寄付の活用方法</a></li>
+			<li><a href="#donate">支援の方法</a></li>
+			<li><a href="#faq">よくあるご質問</a></li>
+      <li><a href="contact/index.html" target="_blank">お問い合わせ<span class="icon icon-newtab-black"></span></a></li>
+		</ul>
+	</nav>
+  
+  <!-- メインビジュアル -->
+	<div id="top-main">
+		<h1>みんなの<span class="orange">笑顔</span>を<br>
+			一緒につくる</h1>
+		<div class="happy-img-1 rellax" data-rellax-speed="3"><img src="images/photo/tms-happy-1.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-2 rellax" data-rellax-speed="1"><img src="images/photo/tms-happy-2.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-3 rellax" data-rellax-speed="2"><img src="images/photo/tms-happy-3.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-4 rellax" data-rellax-speed="1"><img src="images/photo/tms-happy-4.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-5 rellax" data-rellax-speed="3"><img src="images/photo/tms-happy-5.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-6 rellax" data-rellax-speed="2"><img src="images/photo/tms-happy-6.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-7 rellax" data-rellax-speed="1"><img src="images/photo/tms-happy-7.png" alt="サポーターイメージ"></div>
+		<div class="happy-img-8 rellax" data-rellax-speed="3"><img src="images/photo/tms-happy-8.png" alt="サポーターイメージ"></div>
+		<div class="supporter-logo"><img src="images/logo/tms-supporter-logo.png" alt="サポーターロゴ"></div>
+		<p>より多くの方が無料で電話・SNS相談を<br>
+			利用できるようにするために、<br>
+			スクエアサポーターになりませんか？</p>
+		<div class="btn btn-red-lg btn-donate"><a href="#donate"><span class="icon icon-down-white"></span>スクエアサポーターになる</a></div>
+	</div>
+  
+  <!--　メインコンテンツ  -->
+  <main>
+  <!-- わたしたちが取り組む課題 -->
+    <article id="issue">
+      <h2 class="fade-in">わたしたちが取り組む課題<br></h2>
+      <section class="stress">
+        <picture class="fade-in">
+          <source media="(max-width: 719px)" srcset="images/photo/stress-sp-2x.jpg 2x, images/photo/stress-sp-3x.jpg 3x">
+          <source media="(max-width: 959px)" srcset="images/photo/stress-sp-3x.jpg 2x">
+          <img src="images/photo/stress-pc.jpg" alt="ストレスイメージ"> </picture>
+        <h3 class="fade-in"><span class="text-lg">5</span>人に<span class="text-lg">3</span>人*がストレスを感じている</h3>
+        <p class="fade-in">「心にため込んでいる気持ちを誰かに話したい。<br>
+          誰かに自分を理解してもらいたい。<br>
+          寂しいので誰かと会話をしたい。<br>
+          とにかく愚痴を聞いてもらいたい。<br>
+          絡まった頭の中を整理したい。」</p>
+        <p class="fade-in">2021年の調査*では、全国の15歳から79歳の男女約58%が日常生活や仕事、学校でストレスを感じていることが分かりました。みなさんも、長引くコロナ禍でストレスを感じたことがあるのではないでしょうか。</p>
+        <p class="fade-in">ストレスを感じる皆さんに、気軽に相談できる場所を提供したい。それがわたしたちの原点です。</p>
+        <p class="text-sm fade-in">*株式会社インテージ コロナ禍の生活者のストレス実態についての調査結果（2021年）</p>
+      </section>
+      <section class="suicide">
+        <picture class="fade-in">
+          <source media="(max-width: 719px)" srcset="images/photo/suicide-sp-2x.jpg 2x, images/photo/suicide-sp-3x.jpg 3x">
+          <source media="(max-width: 959px)" srcset="images/photo/suicide-sp-3x.jpg 2x">
+          <img src="images/photo/suicide-pc.jpg" alt="ストレスイメージ"> </picture>
+        <h3 class="fade-in">自殺者は1日に平均<span class="text-lg">50</span>人以上</h3>
+        <p class="fade-in">「誰かに話したいことがあるけど、話せる人がいない。一人で抱えているのはつらいけど、口に出すのもつらい。」</p>
+        <p class="fade-in">警察庁・厚生労働省の自殺統計によると、2021年の自殺者数が2万830人*と分かりました。コロナ禍前の2019年と比べて、女性の自殺は1,000人近く増え、子どもも増加しています。</p>
+        <p class="fade-in">自ら命を絶つ、という選択を取ってしまう方が後を絶ちません。このような深刻な状況に立ち向かうのがわたしたちの使命です。</p>
+        <p class="text-sm fade-in">*警察庁 「令和３年の月別自殺者数について(12月末の速報値)」より、1日平均を計算</p>
+      </section>
+    </article>
+    
+    <!-- わたしたちの主な取り組み -->
+    <article id="action">
+      <h2 class="fade-in">わたしたちの主な取り組み<br></h2>
+      <p class="action-text fade-in">わたしたちは、みなさんのこころの不調やストレスと一緒に向き合うために、無料で相談できる<span class="orange">電話相談</span>・<span class="orange">SNS相談</span>、また相場より低価格で相談できる<span class="orange">傾聴カウンセリング</span>を実施しています（SNS相談は厚生労働省より委託されての活動です）。</p>
+      <div id="action-tab" class="fade-in">
+        <ul>
+          <li><a href="#action-chat">SNS相談</a></li>
+          <li><a href="#action-phone">電話相談</a></li>
+          <li><a href="#action-counseling">カウンセリング</a></li>
+        </ul>
+        <div id="action-chat" class="action-box">
+          <div class="tab-img"><img src="images/illustration/tms-chat.svg" alt="ほっとチャットイメージ"></div>
+          <h3>こころのほっとチャット</h3>
+          <p>NPO法人東京メンタルヘルス・スクエアに所属するSNS相談の専門カウンセラーが悩みをしっかり聞き、どうすることが一番良いのか、一緒に考える、<strong>無料・匿名・予約不要・チャット形式の相談サービス</strong>です。</p>
+          <div class="btn btn-orange-sm btn-chat"><a href="https://www.npo-tms.or.jp/service/sns.html" target="_blank">詳しく<span class="icon icon-newtab-orange"></span></a></div>
+        </div>
+        <!-- #action-chat     -->
+        <div id="action-phone" class="action-box">
+          <div class="tab-img"><img src="images/illustration/tms-phone.svg" alt="ほっとラインイメージ"></div>
+          <h3>こころのほっとライン</h3>
+          <p>どんなことでも、気軽にご利用できる、<strong>1回20分・無料での電話相談</strong>をNPO法人東京メンタルヘルス・スクエア所属のカウンセラーが行っています。</p>
+          <div class="btn btn-orange-sm btn-phone"><a href="https://www.npo-tms.or.jp/service/hotline.html" target="_blank">詳しく<span class="icon icon-newtab-orange"></span></a></div>
+        </div>
+        <!-- #action-phone     -->
+        <div id="action-counseling" class="action-box">
+          <div class="tab-img"><img src="images/illustration/tms-counseling.svg" alt="お話しパートナーイメージ"></div>
+          <h3>お話しパートナー</h3>
+          <p>「お金がかかるからカウンセリングには行けない」と思っている方でも利用しやすい、<strong>1回50分3,000円という低価格の対面・Zoom・電話による傾聴カウンセリング</strong>を実施しています。</p>
+          <div class="btn btn-orange-sm btn-counseling"><a href="https://www.npo-tms.or.jp/service/ohanashi.html" target="_blank">詳しく<span class="icon icon-newtab-orange"></span></a></div>
+        </div>
+        <!-- #action-counseling     --> 
+      </div>
+      <!-- #action-tab     --> 
+    </article>
+    
+    <!-- わたしたちの主な実績   -->
+    <article id="numbers">
+      <h2 class="fade-in">わたしたちの主な実績*<br></h2>
+      <p class="text-sm fade-in">*2021年度（2021年4月〜2022年3月）見込み</p>
+      <section class="numbers-year">
+        <h3 class="fade-in">相談事業の1年間</h3>
+        <div id="numbers-tab" class="fade-in">
+          <ul>
+            <li><a href="#numbers-chat">SNS相談</a></li>
+            <li><a href="#numbers-phone">電話相談</a></li>
+            <li><a href="#numbers-counseling">カウンセリング</a></li>
+          </ul>
+          <div id="numbers-chat" class="numbers-box">
+            <div class="tab-img"><img src="images/illustration/tms-chat.svg" alt=""></div>
+            <h4>ほっとチャット</h4>
+            <p>無料SNS相談の対応数</p>
+            <p>約<span class="orange-lg">38,000</span>件</p>
+          </div>
+          <div id="numbers-phone" class="numbers-box">
+            <div class="tab-img"><img src="images/illustration/tms-phone.svg" alt=""></div>
+            <h4>ほっとライン</h4>
+            <p>無料電話相談の対応数</p>
+            <p>約<span class="orange-lg">600</span>件</p>
+          </div>
+          <div id="numbers-counseling" class="numbers-box">
+            <div class="tab-img"><img src="images/illustration/tms-counseling.svg" alt=""></div>
+            <h4>お話しパートナー</h4>
+            <p>カウンセリングの実施数</p>
+            <p>約<span class="orange-lg">700</span>件</p>
+          </div>
+        </div>
+      </section>
+      <section class="numbers-situation">
+        <h3 class="fade-in">ほっとチャットの現状</h3>
+        <div class="numbers-graph fade-in">
+          <div class="numbers-contact">
+            <div class="graph-container">
+              <div class="contact-graph animate-graph"></div>
+            </div>
+            <div class="contact-text">
+              <h4>問い合わせ数</h4>
+              <p>1日平均約<span class="orange-lg">270</span>件</p>
+            </div>
+          </div>
+          <div class="numbers-respond">
+            <div class="graph-container">
+              <div class="respond-graph animate-graph"></div>
+            </div>
+            <div class="respond-text">
+              <h4>対応数</h4>
+              <p>1日平均約<span class="orange-lg">100</span>件</p>
+            </div>
+          </div>
+        </div>
+        <!-- numbers-graph       -->
+        <div class="numbers-text fade-in">
+          <p>わたしたちの提供する「こころのほっとチャット」は多くの方にご利用いただいており、<strong>提供できるサービスの量をニーズが大きく上回っている</strong>のが現状です。毎日300件近くお問い合わせいただいていますが、100件ほどしか対応できていません。</p>
+          <p>厚生労働省の一時的な助成金などにより、無料相談の場を提供してきましたが、より多くの方が気軽に相談できる環境を作るには、<strong>より安定した強固な財源</strong>が必要です。</p>
+        </div>
+      </section>
+    </article>
+    
+    <!-- 利用者・サポーターの声 -->
+    <article id="voices">
+      <h2 class="fade-in">利用者・サポーターの声<br></h2>
+      <section class="voices-user">
+        <h3 class="fade-in">利用者の声</h3>
+        <div class="slider fade-in">
+          <div class="slide user-slide">
+            <div class="slide-profile">
+              <div class="slide-img"><img src="images/icon/tms-user.svg" alt="ユーザーイメージ"></div>
+              <p class="slide-name">ほっとチャット利用者<br>
+                Aさん</p>
+            </div>
+            <div class="slide-text-box">
+              <p class="slide-text">本当に自殺する直前でした。自傷行為を繰り返し、真っ暗な海へ飛び込みたいという気持ちで、ずっと泣いてました。顔を見ないぶん言葉だけなので声に発するより自身の気持ちを書き伝える事が出来たと思う。文字のやり取りだけど、親身になって聞いてくれて、答えて貰えた。嬉しかった。うんうんって聞いてもらえるだけでも。まだ、そんなにすぐには気持ちは変われないけど、少しずつ1歩ずつ、変われたらなと思います。</p>
+            </div>
+          </div>
+          <div class="slide user-slide slide-r">
+            <div class="slide-profile">
+              <div class="slide-img"><img src="images/icon/tms-user.svg" alt="ユーザーイメージ"></div>
+              <p class="slide-name">ほっとチャット利用者<br>
+                Bさん</p>
+            </div>
+            <div class="slide-text-box">
+              <p class="slide-text">無料での利用にも関わらず、とても親切な対応を頂き、非常に嬉しかったです。こうして誰かにお話して、そして丁寧にお話を聞いて貰えたことで 、前に進む力になりました。本当に、ありがとうございました。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="voices-supporter">
+        <h3 class="fade-in">サポーターの声</h3>
+        <div class="slider fade-in">
+          <div class="slide supporter-slide">
+            <div class="slide-profile">
+              <div class="slide-img"><img src="images/photo/tms-supporter-1.png" alt="サポーターイメージ"></div>
+              <p class="slide-name">大村崇寛さん</p>
+            </div>
+            <div class="slide-text-box">
+              <h4>もっと多くの方に<br class="br-sp">
+                こころのケアを</h4>
+              <p class="slide-text">私の親友が大学時代、こころの不調で苦しんでいました。それを目の当たりにし、何もできない自分がとてももどかしかったです。その後、TMSについて知り、「当時は何もできなかったけれど、今ならTMSを通して誰かの役に立てるかもしれない」と直感しました。もっと多くの方がこころのケアを簡単に受けられるようになってほしい。そんな思いで、毎月支援させていただいています。</p>
+            </div>
+          </div>
+          <div class="slide supporter-slide slide-r">
+            <div class="slide-profile">
+              <div class="slide-img"><img src="images/photo/tms-supporter-2.png" alt="サポーターイメージ"></div>
+              <p class="slide-name">山田花子さん</p>
+            </div>
+            <div class="slide-text-box">
+              <h4>TMSはこどもの未来を<br class="br-sp">
+                作っている</h4>
+              <p class="slide-text">私は子どもの時、学校で嫌な思いをしたことがありました。その時、誰かが見守って、介入してくれていたら、なんて考えることもあります。だからこそ、TMSのスクールコンケアはとても意義がある、こどもの未来を作っていく活動だと自信を持って言えます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    
+    <!-- ご寄付の活用方法 -->
+    <article id="usage">
+      <h2 class="fade-in">ご寄付の活用方法<br></h2>
+      <section class="usage-text fade-in">
+        <div class="usage-img-1"><img src="images/photo/usage-1.jpg" alt="活用イメージ"></div>
+        <p class="usage-text-padding">わたしたちは毎日300件、月1万件近く「無料電話・SNS相談」をお受けしています。現時点では1日300件の相談に応じることができず、ご連絡いただいてもお話しすることができない人が多数いらっしゃいます。</p>
+        <p>いただいたご寄付は、一人でも多くに方のお話を聞けるような環境を整えるために活用させていただきます。</p>
+      </section>
+      <section class="usage-example">
+        <h3 class="fade-in">1年間いただいた寄付でできること</h3>
+        <div class="usage-box fade-in">
+          <p><span class="orange-box">毎月</span><span class="text-md">500</span>円で</p>
+          <div class="usage-img"><img src="images/photo/usage-2.jpg" alt="活用イメージ"></div>
+          <p>約<span class="text-md">30</span>人の方に<br>
+            無料SNS相談を提供</p>
+        </div>
+        <div class="usage-box fade-in">
+          <p><span class="orange-box">毎月</span><span class="text-md">1,000</span>円で</p>
+          <div class="usage-img"><img src="images/photo/usage-3.jpg" alt="活用イメージ"></div>
+          <p>約<span class="text-md">70</span>人の方に<br>
+            無料SNS相談を提供</p>
+        </div>
+        <div class="usage-box fade-in">
+          <p><span class="orange-box">毎月</span><span class="text-md">3,000</span>円で</p>
+          <div class="usage-img"><img src="images/photo/usage-4.jpg" alt="活用イメージ"></div>
+          <p>約<span class="text-md">200</span>人の方に<br>
+            無料SNS相談を提供</p>
+        </div>
+      </section>
+    </article>
+    
+    <!-- 支援の方法 -->
+    <article id="donate">
+      <h2 class="fade-in">支援の方法<br></h2>
+      <section class="donate-supporter fade-in">
+        <div class="supporter-logo"><img src="images/logo/tms-supporter-logo.png" alt="サポーターロゴイメージ"></div>
+        <p class="orange">継続的に寄付いただく（毎月500円〜）</p>
+        <h3>スクエアサポーター</h3>
+        <p class="donate-text">一人でも多くに方のお話を聞けるような環境を整えるため、自由に金額を設定して継続的にご寄付いただく「スクエアサポーター」を募集しています。</p>
+        <div class="btn btn-red-lg btn-supporter"> <a href="https://congrant.com/credit/form?project_id=1981" target="_blank">すくサポーターになる<span class="icon icon-newtab-white"></span></a> </div>
+        <p class="donate-text text-sm">※上のボタンをクリックするとコングラント株式会社の決済画面に移動します。<br>
+          ※以下のカードがご利用いただけます。</p>
+        <div class="credit-img"><img src="images/logo/credit-card-logo.svg" alt="クレジットカードロゴ"></div>
+      </section>
+      <section class="donate-onetime fade-in">
+        <p class="orange">都度寄付いただく（1,000円〜）</p>
+        <h3>今回のみのご寄付</h3>
+        <p class="donate-text">わたしたちの活動を続けていくために、ご寄付をお願いいたします。<br>1,000円からのご寄付をお願いしております。</p>
+        <div class="btn btn-red-lg btn-onetime"> <a href="https://congrant.com/credit/form?project_id=1972" target="_blank">今回の寄付をする<span class="icon icon-newtab-white"></span></a> </div>
+        <p class="donate-text text-sm">※上のボタンをクリックするとコングラント株式会社の決済画面に移動します。<br>
+          ※以下のカード、または銀行振込がご利用いただけます。</p>
+        <div class="credit-img"><img src="images/logo/credit-card-logo.svg" alt="クレジットカードロゴ"></div>
+      </section>
+    </article>
+    
+    <!-- よくあるご質問 -->
+    <article id="faq" class="fade-in">
+      <h2>よくあるご質問<br></h2>
+      <div class="faq-box">
+        <p class="orange-md">Q</p>
+        <p class="faq-q">税制優遇は受けられますか。</p>
+        <p class="faq-a">NPO法人東京メンタルヘルス・スクエアは認定NPOではないため、税制優遇の対象にはなりません。<br>
+          現在、認定NPO法人を目指して活動しています。</p>
+      </div>
+      <div class="faq-box">
+        <p class="orange-md">Q</p>
+        <p class="faq-q">退会することはできますか。</p>
+        <p class="faq-a">いつでも退会いただけます。メール（<a href="mailto:office@npo-tms.or.jp">office@npo-tms.or.jp</a>）にてご連絡ください。</p>
+      </div>
+      <div class="faq-box">
+        <p class="orange-md">Q</p>
+        <p class="faq-q">領収書は発行していますか。</p>
+        <p class="faq-a">希望される方に発行しています。メール（<a href="mailto:office@npo-tms.or.jp">office@npo-tms.or.jp</a>）にてご連絡ください。</p>
+      </div>
+      <div class="faq-box">
+        <p class="orange-md">Q</p>
+        <p class="faq-q">財務状況について教えてください。</p>
+        <p class="faq-a">2020年度の決算報告書については下記の図をご覧ください。また、<a href="https://www.npo-tms.or.jp/kessan.html" target="_blank">詳しくはこちらからご覧いただけます</a>。</p>
+        <div class="faq-graph"><img src="images/graph/tms-finance-income.svg" alt="経常収益イメージ"></div>
+        <div class="faq-graph"><img src="images/graph/tms-finance-spending.svg" alt="経常支出イメージ"></div>
+      </div>
+    </article>
+  </main>
+  
+  <!-- もっと詳しく -->
+	<aside id="info" class="fade-in">
+		<h3>東京メンタルヘルス・スクエア（TMS）について<br class="br-tb">
+			もっと詳しく知りたい方・疑問のある方</h3>
+		<div class="btn btn-orange-lg"> <a href="https://www.npo-tms.or.jp/" target="_blank">TMSについて<span class="icon icon-newtab-white"></span></a> </div>
+		<div class="btn btn-orange-lg-border"> <a href="contact/index.html" target="_blank">お問い合わせ<span class="icon icon-newtab-orange"></span></a> </div>
+	</aside>
+  
+  <!-- フッター -->
+	<footer>
+		<div class="footer-logo"><a href="https://www.npo-tms.or.jp/" target="_blank"><img src="images/logo/tms-header-logo.png" alt="東京メンタルヘルス・スクエアロゴ"></a></div>
+		<p>NPO法人 東京メンタルヘルス・スクエア<br>
+			〒171-0021 東京都豊島区西池袋2-39-8<br>
+			ローズベイ池袋ビル3階<br>
+			TEL:03-5944-8455（平日10時～17時受付）</p>
+		<small>Copyright &copy; 2022 東京メンタルヘルス・スクエア All Rights Reserved.</small> </footer>
+  
+  <!-- 灰色の背景  -->
+	<div class="pc-bg-stress fade-in"></div>
+	<div class="pc-bg-suicide fade-in"></div>
+	<div class="pc-bg-usage fade-in"></div>
+	
+	<!--　トップへ戻るボタン	-->
+	<div class="page-top"><a href="#"><span class="icon-arrowup"></span></a></div>
+</div>
+</body>
+</html>

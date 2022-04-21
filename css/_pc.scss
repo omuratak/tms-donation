@@ -1,0 +1,419 @@
+// Scss Document
+
+/* =================================================================================================
+PC版の指定
+================================================================================================= */
+@media screen and (min-width:1000px) {
+  
+  article, 
+  aside {
+    margin: 0 auto 300px;
+    width: 980px;
+  }
+  
+  #wrapper {
+    position: relative;
+  }
+  
+  /* ------------------------------
+  フォント指定
+  ------------------------------ */
+  h1 {  
+    font: $pc-h1;
+  }
+
+  h2 {
+    font: $sp-h2;
+    text-align: left;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  h2:before {
+    font: $pc-h2-bg;
+    text-align: left;
+    top: -250%;
+    left: 0%;
+    transform: translate(0, 0);
+  }
+
+  h3 {
+    font: $pc-h3;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    width: 100%;
+  }
+
+
+  .orange-lg {
+    font: $pc-h2;
+  }
+
+  .orange-md {
+    font: $sp-h2;  
+  }
+
+  .text-lg {
+    font: $pc-h1;
+  }
+
+  .text-md {
+    font: $pc-h3;
+    font-weight: bold;
+  }
+
+  .text-sm {
+    font: $sub-text;
+  }
+  
+  /* ------------------------------
+  ヘッダー
+  ------------------------------ */
+  .header-logo {
+    width: 400px;
+  }
+  
+  /* ------------------------------
+  メニュー・ナビゲーション
+  ------------------------------ */
+  .btn-hamburger {
+    top: 35px;
+  }
+  
+  /* ------------------------------
+  メインビジュアル
+  ------------------------------ */
+  #top-main {
+    margin: 0 auto 340px;
+    max-width: 1440px;
+    
+    h1 {
+      margin-bottom: 40px;
+    }
+    
+    .supporter-logo {
+      margin-bottom: 40px;
+    }
+    
+    .btn-red-lg {
+      position: fixed;
+      top: 30px;
+      right: 75px;
+      z-index: 99;
+    }
+    
+    .happy-img-1 {
+      width: 200px;
+      top: 8vh;
+      left: 6vw;
+    }
+
+    .happy-img-2 {
+      width: 120px;
+      top: 71vh;
+      left: 25vw;
+    }
+
+    .happy-img-3 {
+      width: 160px;
+      top: 70vh;
+      right: 21vw;
+    }
+
+    .happy-img-4 {
+      width: 120px;
+      top: 35vh;
+      left: 20vw;
+    }
+
+    .happy-img-5 {
+      width: 200px;
+      top: 48vh;
+      left: 8vw;
+    }
+
+    .happy-img-6 {
+      width: 160px;
+      top: 57vh;
+      right: 8vh;
+    }
+
+    .happy-img-7 {
+      width: 130px;
+      top: 40vh;
+      right: 18vw;
+    }
+
+    .happy-img-8 {
+      width: 195px;
+      top: 7vh;
+      right: 10vw;
+    }
+  }
+  
+  /* ------------------------------
+  わたしたちの取り組む課題
+  ------------------------------ */
+  .pc-bg-stress {
+    background: $grey-20;
+    height: 560px;
+    width: 60%;
+    position: absolute;
+    top: 1110px;
+    left: 0;
+    z-index: -1;
+  }
+
+  .pc-bg-suicide {
+    background: $grey-20;
+    height: 500px;
+    width: 60%;
+    position: absolute;
+    top: 1816px;
+    right: 0;
+    z-index: -1;
+  }
+  
+  #issue {
+    .stress {
+      background: none;
+      
+      h3 {
+        padding-top: 0;
+        margin-left: 0;
+      }
+      
+      img {
+        top: 30px;
+        left: 90%;
+      }
+      
+      p {
+        margin: 0 0 30px 0;
+        max-width: 480px;
+      }
+    }
+    
+    .suicide {
+      background: none;
+      margin-right: 0;
+      
+      h3 {
+        padding-top: 40px;
+        margin-right: 0;
+        margin-left: auto;
+        max-width: 480px;
+      }
+      
+      img {
+        top: 50px;
+        left: -45%;
+      }
+      
+      p {
+        margin: 0 0 30px auto;
+        max-width: 480px;
+      }
+    }
+  }
+  
+  /* ------------------------------
+  わたしたちの主な取り組み
+  ------------------------------ */
+  #action {
+    .action-text {
+      margin-left: 0;
+      text-align: left;
+    }
+    
+    #action-tab {
+      box-shadow: none;
+      display: flex;
+      height: 560px;
+      justify-content: space-around;
+      max-width: none;
+      width: 100%;
+      
+      ul {
+        display: none;
+      }
+      
+      .action-box {
+        position: relative;
+      }
+    }
+  }
+
+  /* ------------------------------
+  わたしたちの主な実績
+  ------------------------------ */
+  #numbers {
+    .text-sm {
+      text-align: left;
+    }
+    
+    h3 {
+      font: $pc-h3;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    
+    #numbers-tab {
+      justify-content: space-around;
+    }
+    
+    .numbers-situation {
+      .numbers-graph {
+        width: 60%;
+      }
+        
+      .numbers-contact,
+      .numbers-respond {
+        width: 40%;
+        height: 500px;
+        margin: 0 auto;
+      }
+                
+      .numbers-respond {
+        padding-top: 250px;
+      }
+
+      .contact-graph {
+        width: 100px;
+        height: 400px;
+        transform: translateY(400px);
+      }
+
+      .respond-graph {
+        width: 100px;
+        height: 150px;
+        transform: translateY(150px);
+      }
+      
+      .numbers-text {
+        width: 40%;
+      }
+    }
+  }
+  
+  /* ------------------------------
+  利用者・サポーターの声
+  ------------------------------ */
+  #voices { 
+    h3 {
+      font: $pc-h3;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    
+    .slide {
+      width: 100%;
+      
+      .slide-profile {
+        width: 20%;
+      }
+      
+      .slide-text-box {
+        padding: 30px;
+        width: 80%;
+      }
+      
+      h4 {
+        font: $pc-h3;
+      }
+    }
+  }
+  
+  /* ------------------------------
+  ご寄付の活用方法
+  ------------------------------ */
+  .pc-bg-usage {
+    background: $grey-20;
+    height: 260px;
+    width: 60%;
+    position: absolute;
+    top: 6744px;
+    left: 0;
+    z-index: -1;
+  }
+  
+  #usage {
+    .usage-text {
+      background: none;
+      
+      p {
+        margin: 0 0 30px 0;
+        max-width: 540px;
+      }
+    }
+    
+    .usage-example {
+      justify-content: space-around;
+      
+      h3 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  
+  /* ------------------------------
+  支援の方法
+  ------------------------------ */
+  #donate {
+    .supporter-logo {
+      padding-top: 40px;
+    }
+    
+    .credit-img {
+      padding-bottom: 40px;
+    }
+    
+    .orange {
+      padding-top: 40px;
+    }
+  }
+  
+  /* ------------------------------
+  よくあるご質問
+  ------------------------------ */
+  #faq {
+    margin-bottom: 100px;
+    
+    .faq-box {
+      width: 100%;
+    }
+    
+    .orange-md,
+    .faq-q {
+      line-height: 64px;
+    }
+    
+    .orange-md {
+      margin-right: 0;
+    }
+    
+    .faq-a {
+      margin-left: 76px;
+    }
+  }
+  
+  /* ------------------------------
+  もっと詳しく
+  ------------------------------ */
+  #info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    width: 800px;
+    
+    h3 {
+      padding-top: 40px;
+      width: 100%;
+    }
+  }
+}

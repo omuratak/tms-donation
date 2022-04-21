@@ -1,0 +1,62 @@
+// Scss Document
+
+// 色を指定
+$black: #444;
+$white: #fff;
+$grey-60: #ccc;
+$grey-20: #f5f5f5;
+$orange-100: #ff8d41;
+$orange-60: #f6ad3b;
+$orange-20: #f7ebbb;
+$red-100: #fe6666;
+$red-60: #ffa3a3;
+
+// フォントサイズを指定
+$pc-h1: 500 64px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$pc-h2: bold 36px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$pc-h2-bg: italic bold 140px/1.5 'Lato', 'sans-serif';
+$pc-h3: 24px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$text: 16px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$sub-text: 12px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$sp-h1: 500 36px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$sp-h2: bold 24px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+$sp-h2-bg: italic 96px/1.5 'Lato', 'sans-serif';
+$sp-h3: 20px/1.5 'Zen Kaku Gothic New', 'sans-serif';
+
+
+/* デバイス共通のスタイルを指定 */
+body {
+	font: $text;
+	background: $white;
+	color: $black;
+}
+
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* コンテンツをフェードインで表示*/
+#wrapper {
+	width: 100%;
+	animation: wrapper-fadein 1s;
+}
+
+@keyframes wrapper-fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+// レスポンシブのSCSSファイルをインポート
+@import 'sp';
+@import 'tb';
+@import 'pc';

@@ -1,0 +1,39 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+	<defs>
+		<style>			
+			.circle {
+				stroke-dasharray: 400;
+				animation: dash 1s ease-in-out;
+				-webkit-animation: dash 1s ease-in-out;
+			}
+			
+			.check {
+				stroke-dasharray: 200;
+				animation: dash-check 1.5s ease-in-out forwards;
+				-webkit-animation: dash-check 1.5s ease-in-out forwards;
+			}
+			
+			@keyframes dash {
+				0% { stroke-dashoffset: 400; }
+				100% { stroke-dashoffset: 0;	}
+			}
+
+			@keyframes dash-check {
+				0% { stroke-dashoffset: 200; }
+				100% { stroke-dashoffset: 0; }
+			}
+			
+			@-webkit-keyframes dash {
+				0% { stroke-dashoffset: 400; }
+				100% { stroke-dashoffset: 0;	}
+			}
+
+			@-webkit-keyframes dash-check {
+				0% { stroke-dashoffset: 200; }
+				100% { stroke-dashoffset: 0; }
+			}
+		</style>
+	</defs>
+	<circle class="circle" fill="none" stroke="#7ecf2c" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+	<polyline class="check" fill="none" stroke="#7ecf2c" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="29.8,67.5 51.5,88.8 100.2,40.2 "/>
+</svg>
